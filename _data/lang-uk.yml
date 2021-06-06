@@ -155,7 +155,7 @@ phone_buy_sell: Купівля-продаж житла
 phone_add_ads: Додати&nbsp;оголошення
 phone_submit_ads: Подати оголошення
 
-flag_ua_city: Київ
+flag_ua_city: Львів
 flag_ua_net: Мережа Вебсайтів Нерухомості
 
 brand_header: Виберіть регіон нерухомості
@@ -183,6 +183,7 @@ offers: Пропозиції
 actions: Акції
 news: Новини
 help: Допомога
+
 #
 # Date
 #
@@ -217,9 +218,11 @@ footer_text_cc_1: Увесь вміст доступний за ліцензіє
 footer_text_cc_2: Creative Commons Attribution 4.0 International license
 footer_text_cc_3: якщо не зазначено інше
 footer_developer: >
-  - розробник
+  -
+
 #region
 lvivska: Львіщини
+
 #city
 boryslav: Борислав
 drohobych: Дрогобич
@@ -229,7 +232,8 @@ novyi-rozdil: Новий Розділ
 sambir: Самбір
 stryi: Стрий
 truskavets: Трускавець
-chervonohrad: Червоноград
+chervonohrad:
+
 #town
 belz: Белз
 bibrka: Бібрка
@@ -266,6 +270,7 @@ uhniv: Угнів
 khyriv: Хирів
 khodoriv: Ходорів
 yavoriv: Яворів
+
 #district
 drohobychskyy: Дрогобицький район
 zolochivskyy: Золочівський район
@@ -274,6 +279,7 @@ sambirskyy: Самбірський район
 stryiskyy: Стрийський район
 chervonohradskyy: Червоноградський район
 yavorivskyy: Яворівський район
+
 #
 # News
 #
