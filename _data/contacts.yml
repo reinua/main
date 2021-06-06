@@ -1,0 +1,66 @@
+#
+# Region
+#
+- type: region
+  item: lvivska
+  name: Нерухомість у Львівській області
+  address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
+  phone_main: 380974949649
+  phone_hot: 380974949649
+  phone_fax: 380974949649
+  email: info@realestate.in.ua
+  www: https://www.realestate.in.ua/
+
+#
+# District
+#
+- type: district
+  item: lvivskyy
+  name: Нерухомість у Львівському районі
+
+#
+# District / Town
+#
+- type: town
+  item: rava-ruska
+  name: Нерухомість в місті Рава-Руська
+
+#
+# Region / City
+#
+- type: city
+  item: lviv
+  name: Нерухомість у місті ЛЬвів
+
+#
+# Developers / Company
+#
+- type: developer
+  item: builder
+  name: Будівельна компанія "Будівельник"
+
+#
+# Realtor / Agent
+#
+- type: realtor
+  item: agent
+  name: Нерухомість від Агента Продавця
+  # address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
+  # phone_main: 380504949649
+  # phone_hot: 380504949649
+  # phone_fax: 380504949649
+  # email: agent@realestate.in.ua
+  # www: https://www.realestate.in.ua/
+
+#
+# Agency / ahentsiya
+#
+- type: agency
+  item: ahentsiya
+  name: Нерухомість від Агенції Продавця
+  # address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
+  # phone_main: 380504949649
+  # phone_hot: 380504949649
+  # phone_fax: 380504949649
+  # email: agency@realestate.in.ua
+  # www: https://www.realestate.in.ua/
