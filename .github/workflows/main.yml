@@ -12,5 +12,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@v2
         with:
-          # JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-          reinua: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_SRC: ${{ secrets.GITHUB_TOKEN }}
