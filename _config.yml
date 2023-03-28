@@ -1,17 +1,20 @@
 baseurl: ''
 domain: realestate.in.ua
 url: 'https://www.realestate.in.ua'
+addre: 'https://add.realestate.in.ua'
 
 encoding: UTF-8
 lang: uk_UA
+language: Українська
 timezone: Europe/Helsinki
 country: Україна
 region: Львівська область
 region_slug: lvivska
 region_size: .89rem
 
-usd: 27.20
-eur: 32.30
+usd: 37.85
+eur: 40.80
+nbu: 36.5686
 
 title: Мережа Вебсайтів Нерухомості
 keywords: будинки, квартири, земля, житло, нежитлові приміщення, кімнати, оренда, частини квартири, частини будинку, гаражі, місця паркування, ділянки
