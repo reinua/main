@@ -7,14 +7,12 @@ sitemap: false
 
 <div class="row">
   <div class="col-md-6 offset-md-3">
-    <h1>Подання оголошення в місті Львів та Львівський області</h1>
+    <h1>Подання оголошення</h1>
     <p class="lead">Ми вам завджи раді! Будь ласка будьте уважні заповнюючи форму дійсними даними це дуже важливо для вас.</p>
-    <p><a href="{{ site.addre }}">Безкоштовно додати оголошення</a> про продаж чи оренду нерухомості.</p>
-    {% comment %}{%- include add-property.html -%}{% endcomment %}
+    {%- include add-property.html -%}
   </div>
 </div>
 
-{% comment %}
 <div class="modal fade realestate" id="aboutSurface" tabindex="-1" aria-labelledby="aboutSurfaceLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content text-white net-realestate">
@@ -87,4 +85,3 @@ sitemap: false
     </div>
   </div>
 </div>
-{% endcomment %}
