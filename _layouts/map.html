@@ -93,6 +93,8 @@ layout: compress
     {% include modals/net-realestate-modal.html %}
 
     {%- capture name -%}{%- include footer/contact.html legal='name' -%}{%- endcapture -%}
+
+{% comment %}
     {%- assign slug = page.url | split: "/" | last -%}
     {%- assign l = page.url | split: '/' -%}
 
@@ -112,6 +114,7 @@ layout: compress
     {%- endif -%}
 
     {%- include footer/data-map.html -%}
+{% endcomment %}
 
   </body>
 </html>
