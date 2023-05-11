@@ -2,7 +2,8 @@
   navtitle: місто Запоріжжя
   subtitle: Нерухомість в Запоріжжі
   small: Запорізька область
-  url: http://www.realestate.zp.ua
+  url: https://www.realestate.zp.ua
+  slug: zaporizhzhska
 
 - title: Нерухомість в Житомирській області
   navtitle: місто Житомир
@@ -52,6 +53,7 @@
   subtitle: Нерухомість в Харкові
   small: Харківська область
   url: http://www.realestate.kh.ua
+  slug: kharkivska
 
 - title: Нерухомість в Кіровоградській області
   navtitle: місто Кропивницький
@@ -107,6 +109,7 @@
   subtitle: Нерухомість в Одесі
   small: Одеська область
   url: http://www.realestate.od.ua
+  slug: odeska
 
 - title: Нерухомість в Київській області
   navtitle: місто Київ
