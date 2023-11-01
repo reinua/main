@@ -1,1 +1,4 @@
-{%- assign records = owners -%}
+{%- assign yendrushchuk = site.data.yendrushchuk -%}
+{%- assign records = owners
+  | concat: yendrushchuk
+-%}
