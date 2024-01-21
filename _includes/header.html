@@ -1,5 +1,5 @@
 <header>
-  <div class="container bg-primary{% if page.url != '/' %} pt-3{% else %} py-3{% endif %}">
+  <div class="container bg-primary{% if pageu != '/' %} pt-3{% else %} py-3{% endif %}">
     <div class="row justify-content-end">{%- include top-nav.html -%}</div>
     <div class="row">
       <div class="col-lg-3">
@@ -7,7 +7,7 @@
           <div class="icon"></div>
           <div class="d-flex flex-column lh-1 ml-2">
             <span class="text-white mt-0 font-weight-bold">{{ site.region }}</span>
-            <span class="small mt-0 text-light">{{ site.data.lang-uk.flag_ua_net }}</span>
+            <span class="small mt-0 text-light">{{ site.data.uk.flag_ua_net }}</span>
           </div>
         </a>
       </div>
@@ -22,7 +22,7 @@
         {% endcomment %}
       </div>
     </div>
-    {%- if page.url != '/' -%}
+    {%- if pageu != '/' -%}
       {%- include header/navbar.html -%}
     {%- endif -%}
   </div>
@@ -32,42 +32,9 @@
         <div class="bg-light pb-3 px-0 border-0 card card-body">
           <div class="row">
             <div class="col-md-6 offset-md-3">
-              <select id="areaSelect">
-                <option value="">Введіть назву місцевості чи тип нерухомості</option>
-                {%- for r in site.data.realestate -%}
-                  {%- if r.url == site.url and r.slug and r.slug != "" -%}
-                    {%- include select/options/0.html -%}
-                  {%- elsif r.slug and r.slug != "" and r.url contains "https" -%}
-                    {%- include regions/{{ r.url | remove: 'https://www.realestate.' | remove: '.ua' }}.html -%}
-                  {%- else -%}
-                    <option value="{{ r.url }}">{{ r.small }}</option>
-                  {%- endif -%}
-                {%- endfor -%}
-                {%- comment -%}
-                  {%- include select/options/0.html -%}
-                  {%- include regions/if.html -%}
-                  {%- include regions/kyiv.html -%}
-                  {%- include regions/te.html -%}
-                  {%- include regions/uz.html -%}
-                  {%- include regions/kh.html -%}
-                  {%- include regions/od.html -%}
-                  {%- include regions/zp.html -%}
-                  {%- include regions/lt.html -%}
-                  {%- include regions/cv.html -%}
-                  {%- include regions/zt.html -%}
-                  {%- include regions/vn.html -%}
-                  {%- include regions/sm.html -%}
-                  {%- include regions/rv.html -%}
-                  {%- include regions/pl.html -%}
-                  {%- include regions/mk.html -%}
-                  {%- include regions/lg.html -%}
-                  {%- include regions/ks.html -%}
-                  {%- include regions/kr.html -%}
-                  {%- include regions/km.html -%}
-                  {%- include regions/ck.html -%}
-                  {%- include regions/cn.html -%}
-                  {%- include regions/crimea.html -%}
-                {%- endcomment -%}
+              <label for="areaSelect" class="sr-only">Пошук місцевості:</label>
+              <select name="areas" id="rehiony" aria-label="Виберіть назву місцевості чи тип нерухомості">
+                <option value="">Введіть назву міста чи району або області</option>
               </select>
             </div>
           </div>

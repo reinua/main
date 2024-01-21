@@ -3,11 +3,11 @@ last_modified_at: 2023-11-06T11:48:41+02:00
 layout: map
 title: Будинки на мапі
 navtitle: Будинки
-subtitle:
+navhide: 1
 breadcrumb: Львів
 description: Оголошення про купівлю, продаж будинків, частин будинку та окремих кімнат у будинку на мапі міста Львів
 coordinates: 49.834763,24.008113
 zoom: 8
 ---
 
-<h1 class="h3">Розташування будинків на мапі - {% if page.url contains "city" or page.url contains "town" %}{{ site.data.lang-uk.city }} {{ page.breadcrumb }}{% else %}{{ page.breadcrumb }} {{ site.data.lang-uk.district }}{% endif %}</h1>
+<h1 class="h3">Розташування будинків на мапі - {% if page.url contains "city" or page.url contains "town" %}{{ site.data.uk.city }} {{ page.breadcrumb }}{% else %}{{ page.breadcrumb }} {{ site.data.uk.district }}{% endif %}</h1>
