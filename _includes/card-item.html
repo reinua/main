@@ -14,10 +14,15 @@
   {%- assign average_price = sum | divided_by: total_records -%}
 {%- elsif ci_slug == 'commercial' -%}
   {%- capture navitemtitle -%}Нежитлова і {{ cint | downcase }} для ведення підприємницької діяльності{%- endcapture -%}
-  {%- assign navitemtitle = cint | append: "частини квартир та окремі кімнати у квартирі або гуртожитку" -%}
   {%- assign commercials = offers | where_exp: 'i', "i.rent != '1' and i.type contains site.data.uk.re_roomsp" -%}
   {%- assign total_records = commercials.size -%}
-  {%- assign average_price = 0 -%}
+  {%- assign sum = 0 -%}
+  {%- for offer in commercials -%}
+    {%- include property/price.html -%}
+    {%- assign price = price | remove: '&nbsp;' -%}
+    {%- assign sum = sum | plus: price -%}
+  {%- endfor -%}
+  {%- assign average_price = sum | divided_by: total_records -%}
 {%- elsif ci_slug == 'developer' -%}
   {%- capture navitemtitle -%}Місцеві {{ cint | downcase }} нерухомості і новобудови та житлові комплекси{%- endcapture -%}
   {%- assign developers = offers | where_exp: 'i', "i.seller contains site.data.uk.building_company" -%}
@@ -51,17 +56,35 @@
   {%- capture navitemtitle -%}Окремі та спільні {{ cint | downcase }} і паркувальні місця над землею та під землею{%- endcapture -%}
   {%- assign garages = offers | where_exp: "i", "i.rent != '1' and i.type == site.data.uk.re_garage or i.type contains site.data.uk.re_place" -%}
   {%- assign total_records = garages.size -%}
-  {%- assign average_price = 0 -%}
+  {%- assign sum = 0 -%}
+  {%- for offer in garages -%}
+    {%- include property/price.html -%}
+    {%- assign price = price | remove: '&nbsp;' -%}
+    {%- assign sum = sum | plus: price -%}
+  {%- endfor -%}
+  {%- assign average_price = sum | divided_by: total_records -%}
 {%- elsif ci_slug == 'house' -%}
   {%- capture navitemtitle -%}Великі і маленькі {{ cint | downcase }} їх окремі частини та відокремлені кімнати у будинку{%- endcapture -%}
   {%- assign houses = offers | where_exp: 'i', "i.rent != '1' and i.type contains site.data.uk.re_house or i.type == site.data.uk.re_house_part" -%}
   {%- assign total_records = houses.size -%}
-  {%- assign average_price = 0 -%}
+  {%- assign sum = 0 -%}
+  {%- for offer in houses -%}
+    {%- include property/price.html -%}
+    {%- assign price = price | remove: '&nbsp;' -%}
+    {%- assign sum = sum | plus: price -%}
+  {%- endfor -%}
+  {%- assign average_price = sum | divided_by: total_records -%}
 {%- elsif ci_slug == 'land' -%}
   {%- capture navitemtitle -%}{{ cint }} для сільського господарства і земельні ділянки для будівництва{%- endcapture -%}
   {%- assign lands = offers | where_exp: 'i', "i.rent != '1' and i.type contains site.data.uk.re_land" -%}
   {%- assign total_records = lands.size -%}
-  {%- assign average_price = 0 -%}
+  {%- assign sum = 0 -%}
+  {%- for offer in lands -%}
+    {%- include property/price.html -%}
+    {%- assign price = price | remove: '&nbsp;' -%}
+    {%- assign sum = sum | plus: price -%}
+  {%- endfor -%}
+  {%- assign average_price = sum | divided_by: total_records -%}
 {%- elsif ci_slug == 'realtor' -%}
   {%- capture navitemtitle -%}Місцеві {{ cint | downcase }} з купівлі, продажу і оренди нерухомості{%- endcapture -%}
   {%- assign realtors = offers | where_exp: 'i', "i.seller contains site.data.uk.agent or i.seller contains site.data.uk.realtor or i.seller contains site.data.uk.manager or i.seller contains site.data.uk.re_seller" -%}
@@ -92,7 +115,13 @@
   {%- capture navitemtitle -%}Подобова і довгострокова {{ cint | downcase }} квартир, будинків, приміщень, земелі{%- endcapture -%}
   {%- assign rents = offers | where_exp: 'i', "i.rent == '1'" -%}
   {%- assign total_records = rents.size -%}
-  {%- assign average_price = 0 -%}
+  {%- assign sum = 0 -%}
+  {%- for offer in rents -%}
+    {%- include property/price.html -%}
+    {%- assign price = price | remove: '&nbsp;' -%}
+    {%- assign sum = sum | plus: price -%}
+  {%- endfor -%}
+  {%- assign average_price = sum | divided_by: total_records -%}
 {%- else -%}
   {%- capture navitemtitle -%}{%- if cint -%}{{ cint }}{%- elsif ci.breadcrumb -%}{{ ci.breadcrumb }}{%- else -%}{{ ci.title }}{%- endif -%}{%- endcapture -%}
 {%- endif -%}
