@@ -3,7 +3,7 @@
 {%- assign ciu = ci.url -%}
 {%- if ci_slug == 'apartment' -%}
   {%- capture navitemtitle -%}{{ cint }} і частини квартир та окремі кімнати у квартирі або гуртожитку{%- endcapture -%}
-  {%- assign apartments = offers | where_exp: 'i', "i.rent != '1' and i.type == site.data.uk.re_apartment or i.type == site.data.uk.re_apartment_part or i.type contains site.data.uk.re_room" -%}
+  {%- assign apartments = offers | where_exp: 'i', "i.rent != '1' and i.type contains site.data.uk.re_apartment or i.type contains site.data.uk.re_apartment_part or i.type contains site.data.uk.re_room" -%}
   {%- assign total_records = apartments.size -%}
   {%- assign sum = 0 -%}
   {%- for offer in apartments -%}
@@ -54,7 +54,7 @@
   {%- endif -%}
 {%- elsif ci_slug == 'garage' -%}
   {%- capture navitemtitle -%}Окремі та спільні {{ cint | downcase }} і паркувальні місця над землею та під землею{%- endcapture -%}
-  {%- assign garages = offers | where_exp: "i", "i.rent != '1' and i.type == site.data.uk.re_garage or i.type contains site.data.uk.re_place" -%}
+  {%- assign garages = offers | where_exp: "i", "i.rent != '1' and i.type contains site.data.uk.re_garage or i.type contains site.data.uk.re_place" -%}
   {%- assign total_records = garages.size -%}
   {%- assign sum = 0 -%}
   {%- for offer in garages -%}
@@ -65,7 +65,7 @@
   {%- assign average_price = sum | divided_by: total_records -%}
 {%- elsif ci_slug == 'house' -%}
   {%- capture navitemtitle -%}Великі і маленькі {{ cint | downcase }} їх окремі частини та відокремлені кімнати у будинку{%- endcapture -%}
-  {%- assign houses = offers | where_exp: 'i', "i.rent != '1' and i.type contains site.data.uk.re_house or i.type == site.data.uk.re_house_part" -%}
+  {%- assign houses = offers | where_exp: 'i', "i.rent != '1' and i.type contains site.data.uk.re_house or i.type contains site.data.uk.re_house_part" -%}
   {%- assign total_records = houses.size -%}
   {%- assign sum = 0 -%}
   {%- for offer in houses -%}
