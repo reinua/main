@@ -10,6 +10,10 @@
 
 .text-sm { font-size: ($font-size-base); }
 
-@media (min-width(var(--breakpoint-sm))) {
+@include media-breakpoint-only(xs) {
+  .text-sm { font-size: .96rem; }
+}
+
+@include media-breakpoint-only(sm) {
   .text-sm { font-size: .996rem; }
 }
