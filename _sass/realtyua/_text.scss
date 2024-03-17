@@ -7,3 +7,9 @@
     .font#{$infix}-weight-bold  { font-weight: 700!important; }
   }
 }
+
+.text-sm { font-size: ($font-size-base); }
+
+@media (min-width(var(--breakpoint-sm))) {
+  .text-sm { font-size: .996rem; }
+}
