@@ -8,7 +8,6 @@ Disallow: /assets/css/*
 Disallow: /assets/js/*
 Disallow: *.json
 Disallow: *.yml
-Disallow: *CNAME
 Disallow: /404.html
 Disallow: /add.html
 Disallow: /new.html
