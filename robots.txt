@@ -3,9 +3,10 @@ Allow: /
 Disallow: /*/data/*
 Disallow: /*/data/
 Disallow: /*/data/*.json
-Disallow: *.json
 Disallow: /assets/css/*
 Disallow: /assets/js/*
+Disallow: /assets/images/logo/
+Disallow: /assets/images/staff/
 Disallow: *.json
 Disallow: *.yml
 Disallow: /404.html
